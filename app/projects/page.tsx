@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowSquareOut, ImageSquare } from "@phosphor-icons/react";
+import { ArrowSquareOut, ImageSquare } from "@phosphor-icons/react/dist/ssr";
 import { SiGithub } from "react-icons/si";
 import Footer from "@/components/ui/Footer";
 import Navbar from "@/components/ui/Navbar";
