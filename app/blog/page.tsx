@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import BlogClient from "@/components/sections/BlogClient";
 import Footer from "@/components/ui/Footer";
@@ -24,11 +25,39 @@ export default async function BlogPage() {
             Writing about engineering execution, practical AI, project lessons, and personal growth.
           </p>
           <div className="mt-8">
-            <BlogClient posts={posts} />
+            <Suspense fallback={<BlogLoadingState />}>
+              <BlogClient posts={posts} />
+            </Suspense>
           </div>
         </div>
       </main>
       <Footer />
+    </div>
+  );
+}
+
+function BlogLoadingState() {
+  return (
+    <div className="space-y-6">
+      <div className="flex gap-3 overflow-x-auto pb-2">
+        {["Loading", "Posts", "Please wait"].map((label) => (
+          <div
+            key={label}
+            className="neo-border neo-shadow-sm whitespace-nowrap bg-white px-4 py-2 text-xs font-bold uppercase tracking-[2px] text-charcoal/60"
+          >
+            {label}
+          </div>
+        ))}
+      </div>
+      <div className="neo-border clay-surface overflow-hidden">
+        <div className="h-3 bg-steel" />
+        <div className="space-y-4 p-6">
+          <div className="h-4 w-24 animate-pulse bg-midgrey" />
+          <div className="h-10 w-2/3 animate-pulse bg-midgrey" />
+          <div className="h-4 w-full animate-pulse bg-midgrey" />
+          <div className="h-4 w-5/6 animate-pulse bg-midgrey" />
+        </div>
+      </div>
     </div>
   );
 }
