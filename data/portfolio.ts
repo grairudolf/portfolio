@@ -134,7 +134,7 @@ export const experiences: Experience[] = [
     role: "Software Engineer Intern",
     period: "Aug 2025 - Jan 2026",
     description:
-      "Built Skala-mentum, an intern management platform that streamlined task tracking, evaluation cycles, and mentor feedback workflows.",
+      "Built skale-am, an intern management platform that streamlined task tracking, evaluation cycles, and mentor feedback workflows.",
     tags: ["Next.js", "Elysia.js", "TypeScript"],
     websiteUrl: "https://www.skaleway.com",
     logoPath: "/companies/skaleway.png"
@@ -265,15 +265,15 @@ export const projects: Project[] = [
     imagePath: "/projects/cameroon-budget-boss.jpg"
   },
   {
-    title: "Skala-mentum",
+    title: "skale-am",
     description:
       "Intern operations platform with role-based workflows, assignment dashboards, and structured review cycles.",
     tags: ["Next.js", "Elysia.js", "TypeScript"],
     date: "Aug 2025 - Jan 2026",
-    githubUrl: "https://github.com/grairudolf/skala-mentum",
-    liveUrl: "https://skala-mentum.app",
+    githubUrl: "https://github.com/grairudolf/skale-am",
+    liveUrl: "https://skale-am.app",
     featured: false,
-    imagePath: "/projects/skala-mentum.jpg"
+    imagePath: "/projects/skale-am.jpg"
   }
 ];
 
@@ -325,8 +325,8 @@ export const softSkills: SoftSkill[] = [
 export const communityEntries: CommunityEntry[] = [
   {
     title: "Tech Innovation Center (TiC)",
-    role: "Regional Tech Trainer",
-    description: "Shaping the next generation of techpreneurs in Cameroon through practical mentorship and training.",
+    role: "Fellow",
+    description: "Shaping the next generation of techpreneurs in Cameroon through practical mentorship and training. For the nations largest preuniversity competition, The TiC Summit",
     period: "2024 - Present",
     icon: Briefcase
   },
@@ -339,22 +339,15 @@ export const communityEntries: CommunityEntry[] = [
   },
   {
     title: "Knowledge Center (KC)",
-    role: "Science Tutor and Developer",
-    description: "Empowering the next generation of global leaders through meritocratic education and digital tools.",
+    role: "Scholar, Science Tutor and Developer",
+    description: "Contributiiong to building a generation of global leaders through STEM education and building a meritocracy.",
     period: "2024 - Present",
     icon: Lightbulb
   },
   {
-    title: "Tutoring",
-    role: "Teacher",
-    description: "Making learning accessible and empowering for students who need focused support.",
-    period: "2024 - Present",
-    icon: ChatTeardropText
-  },
-  {
     title: "CMFI (Christian Missionary Fellowship International)",
-    role: "Disciple",
-    description: "Devoted to following Christ and sharing the gospel through community and service.",
+    role: "Developer",
+    description: "Devoted to following Christ and sharing the gospel of Jesus Christ, through teachnology and innovation.",
     period: "2024 - Present",
     icon: Crown
   }
