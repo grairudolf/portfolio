@@ -46,6 +46,28 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
     router.replace("/blog", { scroll: false });
   };
 
+  useEffect(() => {
+    if (activePost) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [activePost]);
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && activePost) {
+        setActivePost(null);
+        router.replace("/blog", { scroll: false });
+      }
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [activePost]);
+
   return (
     <div className="space-y-8">
       <div className="flex gap-3 overflow-x-auto pb-2">
@@ -194,35 +216,35 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closePost}
-            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 px-4 py-8"
+            className="fixed inset-0 z-[60] flex items-start justify-center overflow-y-auto bg-black/70 px-4 py-12"
           >
             <motion.div
-              initial={{ y: 20, opacity: 0 }}
+              initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 20, opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              exit={{ y: 30, opacity: 0 }}
+              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
               onClick={(event) => event.stopPropagation()}
-              className="neo-border clay-surface w-full max-w-3xl"
+              className="neo-border clay-surface w-full max-w-3xl relative my-8"
             >
-              <div className="flex items-center justify-between border-b-2 border-charcoal px-6 py-4">
-                <div>
+              <div className="sticky top-0 z-10 flex items-start justify-between border-b-2 border-charcoal/10 bg-[#faf9f6] px-6 py-4">
+                <div className="pr-4">
                   <p className="text-[0.64rem] font-bold uppercase tracking-[2px] text-steel">{activePost.category}</p>
-                  <h2 className="section-title mt-1 text-2xl md:text-3xl">{activePost.title}</h2>
+                  <h2 className="section-title mt-1 text-xl md:text-2xl leading-tight">{activePost.title}</h2>
                 </div>
                 <button
                   type="button"
                   onClick={closePost}
-                  className="neo-interactive neo-border bg-offwhite px-3 py-2 text-xs font-bold uppercase tracking-[2px] text-charcoal"
+                  className="neo-interactive neo-border bg-offwhite px-3 py-2 text-xs font-bold uppercase tracking-[2px] text-charcoal shrink-0"
                 >
                   Close
                 </button>
               </div>
-              <div className="max-h-[70vh] overflow-y-auto px-6 py-5">
+              <div className="px-6 py-6">
                 <div
-                  className="space-y-4 text-sm leading-relaxed text-gray-800"
+                  className="blog-content space-y-4 text-sm leading-7 text-gray-800"
                   dangerouslySetInnerHTML={{ __html: activePost.contentHtml ?? "" }}
                 />
-                <div className="mt-6 flex flex-wrap items-center gap-3">
+                <div className="mt-8 flex flex-wrap items-center gap-4 border-t border-charcoal/10 pt-6">
                   {activePost.mediumUrl ? (
                     <Link
                       href={activePost.mediumUrl}
@@ -238,8 +260,18 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
                     </span>
                   )}
                   <span className="text-[0.62rem] font-bold uppercase tracking-[1.6px] text-gray-600">
-                    {activePost.date} | {activePost.readTime}
+                    {activePost.date} &middot; {activePost.readTime}
                   </span>
+                  <div className="ml-auto flex flex-wrap gap-2">
+                    {activePost.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="neo-border bg-midgrey px-2 py-1 text-[0.6rem] font-bold uppercase tracking-[1.4px]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>

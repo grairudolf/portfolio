@@ -187,9 +187,9 @@ export const projects: Project[] = [
       "From-scratch neural radiance field implementation with camera pose ingestion, volume rendering, and reproducible experiment setup for 3D scene synthesis.",
     tags: ["PyTorch", "Computer Vision", "Rendering"],
     date: "Nov 2025 - Jan 2026",
-    githubUrl: "https://github.com/grairudolf/nerf-implementation",
+    githubUrl: "https://github.com/grairudolf/nerf",
     featured: true,
-    imagePath: "/projects/nerf-implementation.jpg"
+    imagePath: "/projects/nerf.jpg"
   },
   {
     title: "EazyCV",
@@ -210,7 +210,7 @@ export const projects: Project[] = [
     date: "Jan 2026 - Mar 2026",
     githubUrl: "https://github.com/grairudolf/lora",
     featured: true,
-    imagePath: "/projects/lora-replication.jpg"
+    imagePath: "/projects/lora.jpg"
   },
   {
     title: "EduMind",
@@ -245,13 +245,13 @@ export const projects: Project[] = [
   {
     title: "Silicon Hub",
     description:
-      "Hackathon project integrating external AI APIs into a startup-focused platform with rapid prototyping and collaborative feature shipping.",
-    tags: ["AI APIs", "Hackathon", "Web App"],
+      "SiliconHub is a collaborative platform designed to connect developers, innovators, and tech enthusiasts. It offers tools, resources, and a community space to share projects, find collaborators, and grow ideas from concept to launch. Special credits to my team The Scripts for this project.",
+    tags: ["MongoDB", "Express", "React", "Node.js"],
     date: "May 2025 - Jul 2025",
-    githubUrl: "https://github.com/grairudolf/silicon-hub",
-    liveUrl: "https://siliconhub.vercel..app",
+    githubUrl: "https://github.com/grairudolf/CFC25_HACKATHON",
+    liveUrl: "https://siliconhub.vercel.app",
     featured: false,
-    imagePath: "/projects/silicon-hub.jpg"
+    imagePath: "/projects/siliconhub.jpg"
   },
   {
     title: "Cameroon Budget Boss",
@@ -262,18 +262,51 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/grairudolf/cameroon-budget-boss",
     liveUrl: "https://cameroon-budget-boss.vercel.app",
     featured: false,
-    imagePath: "/projects/cameroon-budget-boss.jpg"
+    imagePath: "/projects/cameroon.jpg"
   },
   {
-    title: "skale-am",
+    title: "Portfolio Website",
     description:
-      "Intern operations platform with role-based workflows, assignment dashboards, and structured review cycles.",
-    tags: ["Next.js", "Elysia.js", "TypeScript"],
-    date: "Aug 2025 - Jan 2026",
-    githubUrl: "https://github.com/grairudolf/skale-am",
-    liveUrl: "https://skale-am.app",
+      "A sleek, modern personal portfolio designed to showcase my work, personality, and journey — complete with a dark theme and smooth, engaging visuals for a memorable user experience.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    date: "2024",
+    githubUrl: "https://github.com/grairudolf/myportfoilio",
+    liveUrl: "https://myportfoilio-indol.vercel.app",
     featured: false,
-    imagePath: "/projects/skale-am.jpg"
+    imagePath: "/projects/port.jpg"
+  },
+  {
+    title: "Task Management App",
+    description:
+      "A productivity application designed to help users manage tasks, set clear priorities, and track progress across multiple projects with ease and efficiency.",
+    tags: ["React", "Node.js", "TypeScript"],
+    date: "2024",
+    githubUrl: "",
+    liveUrl: "https://taskify-liard-iota.vercel.app",
+    featured: false,
+    imagePath: "/projects/task.jpg"
+  },
+  {
+    title: "Astrophysics Career Guide",
+    description:
+      "Born from my passion for astronomy, I strongly encourage dreaming big — because great dreams add meaning, direction, and color to life.",
+    tags: ["HTML", "CSS", "JavaScript", "SCSS"],
+    date: "2024",
+    githubUrl: "https://github.com/grairudolf/AstroPhysics",
+    liveUrl: "https://astro-physics-career.vercel.app",
+    featured: false,
+    imagePath: "/projects/astrophysics.jpg"
+  },
+  {
+    title: "NetBoltZ",
+    description:
+      "Developed with teammates Ayafor Bill and Tazuh Faith in response to widespread slow internet connectivity. Designed to enhance browsing speed and significantly improve the overall internet experience.",
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "Java", "SSH"],
+    date: "2024",
+    githubUrl: "https://github.com/basedcatx/NetBoltZ",
+    liveUrl: "https://netboltz.vercel.app",
+    featured: false,
+    imagePath: "/projects/netboltz.jpg"
   }
 ];
 
@@ -325,29 +358,36 @@ export const softSkills: SoftSkill[] = [
 export const communityEntries: CommunityEntry[] = [
   {
     title: "Tech Innovation Center (TiC)",
-    role: "Fellow",
-    description: "Shaping the next generation of techpreneurs in Cameroon through practical mentorship and training. For the nations largest preuniversity competition, The TiC Summit",
+    role: "Regional Tech Trainer",
+    description: "I actively contribute to shaping the next generation of great minds and techpreneurs in Cameroon, helping students become problem solvers and innovators who create meaningful change in their communities and beyond.",
     period: "2024 - Present",
     icon: Briefcase
   },
   {
     title: "FET AI Club",
     role: "Member",
-    description: "Growing practical AI skills through peer collaboration, project sessions, and applied experimentation.",
+    description: "Active member of my Faculty's Artificial Intelligence Club, where I grow and collaborate with peers to develop practical skills, share ideas, and explore the future of intelligent systems.",
     period: "2024 - 2025",
     icon: Brain
   },
   {
     title: "Knowledge Center (KC)",
-    role: "Scholar, Science Tutor and Developer",
-    description: "Contributiiong to building a generation of global leaders through STEM education and building a meritocracy.",
+    role: "Science Tutor and Developer",
+    description: "One of the things I'm most grateful for is the gift of KC — an organization that challenges societal norms and champions meritocracy, all while empowering the next generation of global leaders and visionaries.",
     period: "2024 - Present",
     icon: Lightbulb
   },
   {
+    title: "Tutoring",
+    role: "Teacher",
+    description: "After high school, I developed a passion for teaching to help other students learn more easily by guiding them through the same challenges I once faced. My goal has been to make learning accessible, relatable, and empowering for those who need support.",
+    period: "2024 - Present",
+    icon: ChatTeardropText
+  },
+  {
     title: "CMFI (Christian Missionary Fellowship International)",
-    role: "Developer",
-    description: "Devoted to following Christ and sharing the gospel of Jesus Christ, through teachnology and innovation.",
+    role: "Disciple",
+    description: "I am a disciple of the Lord Jesus Christ, devoted to following Him and obeying His commands — the very reason we were created. My life's mission is to glorify God by living in obedience to His Word and sharing the gospel, so that as many souls as possible may come to the knowledge of salvation.",
     period: "2024 - Present",
     icon: Crown
   }
@@ -358,7 +398,7 @@ export const contactInfo: ContactInfo = {
   github: "https://github.com/grairudolf",
   linkedin: "https://linkedin.com/in/grairudolf",
   location: "Buea, Cameroon",
-  cvUrl: "/cv.pdf",
+  cvUrl: "https://drive.google.com/file/d/1mTekKfo1YcxbCS5sY6aUFWgul6ZjAmg4/view?usp=sharing",
   linktreeLabel: "Scan to visit my Linktree",
   qrCodePath: "/grairudolf0.png"
 };

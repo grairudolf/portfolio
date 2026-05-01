@@ -14,7 +14,7 @@ export default function Footer() {
         </p>
         <div className="flex justify-center md:justify-end">
           <Link
-            href="/cv.pdf"
+            href="https://drive.google.com/file/d/1mTekKfo1YcxbCS5sY6aUFWgul6ZjAmg4/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
             className="neo-interactive neo-border neo-shadow-sm inline-flex items-center gap-2 bg-steel px-4 py-2 text-[0.72rem] font-bold uppercase tracking-[2px] text-white"
